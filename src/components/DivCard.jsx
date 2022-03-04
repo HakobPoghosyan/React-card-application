@@ -1,11 +1,12 @@
 import React from "react";
+import Button from "./Button";
 import "../styles/divCard.css";
 
-const DivCard = ({ number, button }) => {
+const DivCard = ({ number, func }) => {
   return (
     <div className="divCard">
       {number}
-      {button}
+      <Button classname="buttonX" text={"X"} onclick={func} />
     </div>
   );
 };

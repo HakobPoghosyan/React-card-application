@@ -3,30 +3,21 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Instructions from "./components/Instructions";
-import DivCard from "./components/DivCard";
-import Button from "./components/Button";
 import "./styles/buttonX.css";
 import "./styles/section.css";
+import "./styles/generalDiv.css";
+import { getRandomInt } from "./functions/randomNumbers";
+import { createUUID } from "./functions/randomId";
 
 const App = () => {
   const [cards, setCards] = useState([]);
-
-  const getRandomInt = () => {
-    return Math.floor(Math.random() * 999);
-  };
-
-  const deleteCard = (id) => {
-    for (let i = 0; i < cards.length; i++) {
-      setCards(cards.filter((obj) => obj.id !== id));
-    }
-  };
 
   const addCard = () => {
     const randomNumber = getRandomInt();
     setCards([
       ...cards,
       {
-        id: cards.length,
+        id: createUUID(),
         number: randomNumber,
       },
     ]);
@@ -41,24 +32,10 @@ const App = () => {
 
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <div className="generalDiv">
         <div className="section">
           <Header addCardBtn={() => addCard()} sortCardBtn={() => sortCard()} />
-          <Main
-            card={cards.map((item, index) => (
-              <DivCard
-                number={item.number}
-                key={index}
-                button={
-                  <Button
-                    classname={"buttonX"}
-                    text={"X"}
-                    onclick={() => deleteCard(item.id)}
-                  />
-                }
-              />
-            ))}
-          ></Main>
+          <Main newArr={cards} setNewArr={setCards} />
           <Footer />
         </div>
         <div>
