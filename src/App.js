@@ -34,18 +34,16 @@ const App = () => {
   };
 
   return (
-    <>
-      <div className="generalDiv">
-        <div className="section">
-          <Header addCardBtn={addCard} sortCardBtn={sortCard} />
-          <Main newArr={cards} removeCard={deleteCard} />
-          <Footer />
-        </div>
-        <div>
-          <Instructions />
-        </div>
+    <div className="generalDiv">
+      <div className="section">
+        <Header addCardBtn={addCard} sortCardBtn={sortCard} />
+        <Main newArr={cards} removeCard={deleteCard} />
+        <Footer />
       </div>
-    </>
+      <div>
+        <Instructions />
+      </div>
+    </div>
   );
 };
 

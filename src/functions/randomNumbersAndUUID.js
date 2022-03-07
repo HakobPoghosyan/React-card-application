@@ -1,6 +1,7 @@
+import { constants } from "../constants/constants";
+
 export const getRandomInt = () => {
-  const num = 999;
-  return Math.floor(Math.random() * num);
+  return Math.floor(Math.random() * constants.num);
 };
 
 export const createUUID = () => {

@@ -10,7 +10,7 @@ const Main = ({ newArr, removeCard }) => {
           number={item.number}
           key={index}
           id={item.id}
-          func={removeCard}
+          action={removeCard}
         />
       ))}
     </div>
