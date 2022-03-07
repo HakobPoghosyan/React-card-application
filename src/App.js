@@ -33,10 +33,14 @@ const App = () => {
     setCards(cards.filter((obj) => obj.id !== id));
   };
 
+  const clearCards = (id) => {
+    setCards(cards.filter((obj) => obj.id == id));
+  }
+
   return (
     <div className="generalDiv">
       <div className="section">
-        <Header addCardBtn={addCard} sortCardBtn={sortCard} />
+        <Header addCardBtn={addCard} sortCardBtn={sortCard} removeAllCards={clearCards}/>
         <Main arr={cards} removeCard={deleteCard} />
         <Footer />
       </div>
