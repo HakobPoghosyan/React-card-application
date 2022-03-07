@@ -1,0 +1,12 @@
+.instructions {
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid black;
+}
+
+.instuctions-text {
+    padding: 12px;
+}
