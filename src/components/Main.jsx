@@ -2,10 +2,10 @@ import React from "react";
 import DivCard from "./DivCard";
 import "../styles/main.css";
 
-const Main = ({ newArr, removeCard }) => {
+const Main = ({ arr, removeCard }) => {
   return (
     <div className="main">
-      {newArr.map((item, index) => (
+      {arr.map((item, index) => (
         <DivCard
           number={item.number}
           key={index}

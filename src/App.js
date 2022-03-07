@@ -6,7 +6,7 @@ import Instructions from "./components/Instructions";
 import "./styles/buttonX.css";
 import "./styles/section.css";
 import "./styles/generalDiv.css";
-import { createUUID, getRandomInt } from "./functions/randomNumbersAndUUID";
+import { createUUID, getRandomInt } from "./functions/randomFuncs";
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -37,7 +37,7 @@ const App = () => {
     <div className="generalDiv">
       <div className="section">
         <Header addCardBtn={addCard} sortCardBtn={sortCard} />
-        <Main newArr={cards} removeCard={deleteCard} />
+        <Main arr={cards} removeCard={deleteCard} />
         <Footer />
       </div>
       <div>

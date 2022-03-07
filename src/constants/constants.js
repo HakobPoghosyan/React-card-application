@@ -1,3 +1,3 @@
 export const constants = {
-   num : 999,
-}
+  num: 999,
+};
