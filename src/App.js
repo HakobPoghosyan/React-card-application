@@ -6,7 +6,7 @@ import Instructions from "./components/Instructions";
 import "./styles/buttonX.css";
 import "./styles/section.css";
 import "./styles/generalDiv.css";
-import { createUUID, getRandomInt } from "./functions/randomFuncs";
+import { createUUID, getRandomInt } from "./functions/helper";
 
 const App = () => {
   const [cards, setCards] = useState([]);
