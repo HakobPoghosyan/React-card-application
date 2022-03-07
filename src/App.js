@@ -33,8 +33,8 @@ const App = () => {
     setCards(cards.filter((obj) => obj.id !== id));
   };
 
-  const clearCards = (id) => {
-    setCards(cards.filter((obj) => obj.id == id));
+  const clearCards = () => {
+    setCards([]);
   }
 
   return (
