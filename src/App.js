@@ -30,9 +30,7 @@ const App = () => {
   };
 
   const deleteCard = (id) => {
-    for (let i = 0; i < cards.length; i++) {
-      setCards(cards.filter((obj) => obj.id !== id));
-    }
+    setCards(cards.filter((obj) => obj.id !== id));
   };
 
   return (
@@ -40,7 +38,7 @@ const App = () => {
       <div className="generalDiv">
         <div className="section">
           <Header addCardBtn={addCard} sortCardBtn={sortCard} />
-          <Main newArr={cards} deleteFunc={deleteCard} />
+          <Main newArr={cards} removeCard={deleteCard} />
           <Footer />
         </div>
         <div>

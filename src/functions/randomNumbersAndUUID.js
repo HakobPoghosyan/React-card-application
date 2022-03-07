@@ -1,5 +1,6 @@
 export const getRandomInt = () => {
-  return Math.floor(Math.random() * 999);
+  const num = 999;
+  return Math.floor(Math.random() * num);
 };
 
 export const createUUID = () => {

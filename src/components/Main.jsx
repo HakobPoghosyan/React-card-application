@@ -2,7 +2,7 @@ import React from "react";
 import DivCard from "./DivCard";
 import "../styles/main.css";
 
-const Main = ({ newArr, deleteFunc }) => {
+const Main = ({ newArr, removeCard }) => {
   return (
     <div className="main">
       {newArr.map((item, index) => (
@@ -10,7 +10,7 @@ const Main = ({ newArr, deleteFunc }) => {
           number={item.number}
           key={index}
           id={item.id}
-          func={deleteFunc}
+          func={removeCard}
         />
       ))}
     </div>
